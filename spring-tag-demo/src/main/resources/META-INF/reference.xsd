@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.asm.com/schema/reference"
+        xmlns:tns="http://www.asm.com/schema/reference"
+        elementFormDefault="qualified">
+    <element name="reference">
+        <complexType>
+            <attribute name="id" type="string"/>
+            <attribute name="protocol" type="string"/>
+            <attribute name="clazz" type="string" />
+        </complexType>
+    </element>
+</schema>
