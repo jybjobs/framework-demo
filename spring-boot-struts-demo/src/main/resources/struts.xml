@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/><!-- 支持动态调用 -->
+    <constant name="struts.objectFactory" value="spring"/>
+    <constant name="struts.objectFactory.spring.autoWire" value="name" />
+    <constant name="struts.convention.exclude.parentClassLoader" value="false" />
+    <constant name="struts.convention.action.fileProtocols" value="jar,code-source" />
+<!--    <constant name="struts.convention.default.parent.package" value="basicStruts"/>-->
+<!--    <package name="basicStruts" extends="struts-default">-->
+<!--        <action name="hello" class="com.sma.sboot.demo.action.Demo2Action" method="getTest">-->
+<!--            <result name="index">/index.jsp</result>-->
+<!--        </action>-->
+
+<!--    </package>-->
+</struts>

@@ -1,0 +1,27 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: spring-boot-demo
+#  web:
+#    resources:  #静态资源
+#      static-locations:
+#        - classpath:/META-INF/resources/
+#        - classpath:/resources/
+#        - classpath:/static/
+#        - classpath:/public/
+#        - classpath:/img/
+#        - classpath:/js/
+#  mvc:
+#    view:
+#      prefix: /
+#      suffix: .jsp
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka:admin@192.168.0.227:9401/eureka
+    fetch-registry: true
+    register-with-eureka: true
+    refresh:
+       interval: 5
