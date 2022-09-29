@@ -39,6 +39,7 @@ public class SelfMetrics  {
 
 
     /**
+     * 显示在prometheus指标中：http_requests_total{uri="/trans",} 3.0
      * @Description // 调用次数统计
      * @Param []
      * @return void

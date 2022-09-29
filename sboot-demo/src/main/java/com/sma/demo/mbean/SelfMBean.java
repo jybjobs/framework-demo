@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.concurrent.atomic.LongAdder;
 
 /**
+ * 会显示在com.sma.demo.mbean.SelfMBean 下面
  * @Author: jinyb
  * @Date: 2022/5/11
  * @Description: Mbean扩展

@@ -16,6 +16,10 @@ import org.springframework.stereotype.Component;
 public class SelfEndpoint {
    private static final String DESIRE = "I hope the epidemic will pass soon.";
 
+    /**
+     * 会显示在 org.springframework.boot.Endpoint.self 下
+     * @return
+     */
    @ReadOperation
    public String getInfo(){
        return DESIRE;
