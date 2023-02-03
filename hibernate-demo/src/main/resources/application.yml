@@ -1,0 +1,28 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        new_generator_mappings: false
+        globally_quoted_identifiers: true # 是否为所有的数据库标识符（如表名、字段名等）加上引号
+        format_sql: false
+       # allow_update_outside_transaction: true
+        jdbc:
+          batch_size: 50
+          batch_versioned_data: true
+          order_inserts: true
+          order_updates: true
+    database: MYSQL
+    show-sql: true
+    #当写的实体类中属性，如果对应表没有该属性的字段，会自动创建一个该属性的字段，
+    #规则是属性中大写字母处变成_小写字母的字段，比如userName变成user_name
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: mycatadmin
+    password: mycatadmin
+   # url: jdbc:mysql://192.168.0.89:3306/jpa?serverTimezone=UTC&allowMultiQueries=true&rewriteBatchedStatements=true
+    # 只需要加上&rewriteBatchedStatements=true就可以聚合为一条
+    url: jdbc:mysql://localhost:8066/isales_db_isales_001?serverTimezone=UTC&allowMultiQueries=true&rewriteBatchedStatements=true
