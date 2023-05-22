@@ -1,0 +1,8 @@
+/Users/firefly/data/github/grpc-demo/target/generated-sources/protobuf/java/io/grpc/examples/helloworld/HelloReply.java
+/Users/firefly/data/github/grpc-demo/target/generated-sources/protobuf/java/io/grpc/examples/helloworld/HelloReplyOrBuilder.java
+/Users/firefly/data/github/grpc-demo/target/generated-sources/protobuf/java/io/grpc/examples/helloworld/HelloWorldProto.java
+/Users/firefly/data/github/grpc-demo/src/main/java/com/firefly/msa/HelloWorldServer.java
+/Users/firefly/data/github/grpc-demo/target/generated-sources/protobuf/java/io/grpc/examples/helloworld/HelloRequestOrBuilder.java
+/Users/firefly/data/github/grpc-demo/src/main/java/com/firefly/msa/HelloWorldClient.java
+/Users/firefly/data/github/grpc-demo/target/generated-sources/protobuf/grpc-java/io/grpc/examples/helloworld/GreeterGrpc.java
+/Users/firefly/data/github/grpc-demo/target/generated-sources/protobuf/java/io/grpc/examples/helloworld/HelloRequest.java
