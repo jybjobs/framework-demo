@@ -9,9 +9,23 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    // 用于gradle转maven
+    id 'maven-publish'
+}
+
+//apply plugin: 'maven-publish'
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from(components.java)
+        }
+    }
 }
 
 repositories {
+    // 优先从本地仓库获取依赖
+    mavenLocal()
     // Use Maven Central for resolving dependencies.
     mavenCentral()
 }
@@ -22,6 +36,9 @@ dependencies {
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:31.1-jre'
+
+    implementation 'org.slf4j:slf4j-api:1.7.25'
+    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -31,6 +48,10 @@ java {
     }
 }
 
+group = 'com.sma'
+version = '0.0.1'
+description = 'gradle-demo'
+
 application {
     // Define the main class for the application.
     mainClass = 'com.sma.gradle.demo.App'
@@ -39,4 +60,23 @@ application {
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+// 获取文件中的数据的task
+ext.jdkVersion = file("ops.properties")
+task printVersion {
+    readOps()
+}
+
+void readOps() {
+
+    if (!jdkVersion.exists()) {
+        throw new GradleException("ops.properies not found!")
+    }
+
+    Properties properties = new Properties()
+    jdkVersion.withInputStream {
+        stream -> properties.load(stream)
+    }
+    println properties.get("JDK_VERSION")
 }
